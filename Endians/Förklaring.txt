@@ -1,0 +1,10 @@
+Jag valde att fortsätta jobba med binära tal i string-form efter att vi redan skrivit funktionerna bin_str16
+och bin_str8. Men jag valde också att skapa lite struktur och skriva ut talen i hexadecimal form för debugging,
+därav cout i while-loopen.
+
+1. För att byta endian så valde jag att göra en enkel cirkulär shift för att rotera runt båda bytsen
+så att de byter plats. Jag tycker att detta löser problemet mycket enekelt utan att överkomplicera det.
+
+2. För att få ut den mittersat byten, skapad av de två, så valde jag att shifta ut de 4 längst åt höger
+och sedan korta ner talet till en unsigned char för att bara ha kvar "kontroll-byten" som jag ville åt.
+Också denna lösningen är simpel och gör jobbet precis som det ska.
